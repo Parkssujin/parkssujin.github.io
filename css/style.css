@@ -227,7 +227,52 @@ button:focus {
 }
 
 .job__img {
-    width: 200px;
-    height: 75px;
+    width: 90px;
+    height: 40px;
     object-fit: cover;
+}
+
+/* Skills */
+#skills {
+    background-color: var(--color-primary-variant);
+    color: var(--color-text);
+}
+
+.skills__container {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    /* 총 2개의 행을 각각 6배 4배 비율로 만들어 주는 명령 */
+    margin: 2rem 3rem;
+    border-radius: 8px;
+    overflow: hidden;
+    /* 혹시나 내 자식 요소중에 내 컨테이너 밖으로 나온 요소가 있다면 숨기기위한 명령 */
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 
+    0 12.5px 10px rgba(0, 0, 0, 0.06), 
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086), 
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+.skills__title{
+    color: var(--color-accent);
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.skills__coding {
+    grid-row: span 2;
+    padding: 1rem;
+    background-color: var(--color-primary);
+}
+
+.skills__tools {
+    padding: 1rem;
+}
+
+.skills__etc {
+    padding: 1rem;
+    background-color: var(--color-primary);
+    filter: brightness(150%);
+    /* 함수로 여러 색을 넣지 않아도 필터를 이용해서 비슷한 색을 표현할 수 있음 */
+
 }
