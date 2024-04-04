@@ -352,3 +352,64 @@ button:focus {
     top: 0;
 }
 
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 일정하게 1배율로 4번 반복*/
+    grid-template-rows: repeat(2, 1fr);
+    /* 1배율로 2번 반복 */
+    gap: 1rem;
+}
+
+.project {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project__img {
+    width: 100%;
+}
+
+.project__metadata {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    /* 플렉스 정렬을 수평정렬이기 때문에 반대로 해주는 명령 */
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in;
+    transform: translateY(-10px);
+    /* hover일 떄 각도를 0px로 바꾸면서 스를스르륵 내려오는 느낌이 나게 하는 명령 */
+}
+
+.project__metadata:hover {
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+
+.project__title:after {
+    content: '';
+    /* 실제 안에 내용은 x 라는 의미 */
+    display: block;
+    /* display 는 블록 요소로 만들어 줄거고 */
+    position: relative;
+    /* 포지션은 상대적으로 가지고 갈거라는 의미 */
+    left: 50%;
+    transform: translateX(-50%);
+    /* x축으로만 -50% 이동하게 설정 */
+    margin: 0.5rem 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+/* html 문서상으로는 존재하지 않지만, css로만 (꾸미기 용으로만)
+project__title다음에 가상의 요소가 생기게 하는 명령 */
+/* title 요소 이전에 넣고싶다면 before 사용가능 */
+  
