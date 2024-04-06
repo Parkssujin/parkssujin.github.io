@@ -487,3 +487,95 @@ project__title다음에 가상의 요소가 생기게 하는 명령 */
 .contact__link:hover {
     color: var(--color-accent);
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 3rem 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: start;
+        /* 수직으로 왼쪽에서부터 시작하는 */
+    }
+
+    .header__menu {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 4rem;
+        gap: 1rem;
+    }
+
+    .header__nav {
+       width: 100%; 
+    }
+
+    #home {
+        padding-bottom: 3rem;
+    }
+
+    .home__title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .majors {
+       flex-direction: column; 
+       /* 모바일 버전에선 카드들이수평으로 정렬되어있으면
+       너무 비좁아보이니 수직으로 바꿈 */
+       align-items: center;
+    }
+
+    .major {
+        max-width: 25rem;
+    }
+
+    .job {
+        justify-content: center;
+    }
+
+    .skills__container {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        flex-direction: column;
+    }
+
+    .category {
+        width: 100%;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial {
+        flex-direction: column;
+    }
+
+    .testimonial:nth-child(even) .testimonial__img {
+        order: 0;
+    }
+
+    .arrow-up {
+        font-size: 2rem;
+        width: 3rem;
+        height: 3rem;
+        bottom: 1.5rem;
+        right: 1.5rem
+    }
+
+
+}
