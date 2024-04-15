@@ -53,7 +53,7 @@ button {
 }
 
 button:focus {
-    outline: 1px solid var(--color-accent);
+    outline: 1px solid transparent;
 }
 
 /* Common */
@@ -112,13 +112,25 @@ button:focus {
     font-size: 1.8rem;
 }
 
+.header__toggle {
+    display: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    position: absolute;
+    /* 기존의 플렉스 방향에서 벗어나게 함 */
+    top: 1.3rem;
+    right: 1rem;
+}
+
 .header__menu {
     display: flex;
     gap: 4px;
 }
 
 .header__menu__item {
+    display: block;
     padding: 8px 16px;
+    border-bottom: 1px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -500,7 +512,7 @@ project__title다음에 가상의 요소가 생기게 하는 명령 */
 
 @media screen and (max-width: 768px) {
     .section {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .title {
@@ -515,13 +527,25 @@ project__title다음에 가상의 요소가 생기게 하는 명령 */
         flex-direction: column;
         align-items: start;
         /* 수직으로 왼쪽에서부터 시작하는 */
+        background-color: var(--color-primary);
+    }
+
+    .header__toggle {
+        display: block;
     }
 
     .header__menu {
+        display: none;
         flex-direction: column;
         text-align: center;
-        padding: 1rem 4rem;
+        margin: 1rem 4rem;
+        /* 틈의 크기를 콘텐츠로 포함하지 않기 위해 padding이 아닌 margin으로 변경
+        (작은 화면에서 터치 실수가 없도록) */
         gap: 1rem;
+    }
+
+    .header__menu.open {
+        display: flex;
     }
 
     .header__nav {
