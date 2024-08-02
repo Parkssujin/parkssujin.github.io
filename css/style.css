@@ -442,42 +442,6 @@ project__title다음에 가상의 요소가 생기게 하는 명령 */
 /* title 요소 이전에 넣고싶다면 before 사용가능 */
   
 
-/* Testimonial */
-.testimonials {
-    margin: 3rem;
-}
-
-.testimonial {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.testimonial:nth-child(even) .testimonial__img {
-    order: 1;
-}
-/* tesimonial 의 짝수의 자식요소중에  tesimonial의 이미지 태그를
-1번째로 오더를 지정 (원래는 0번째,)*/
-
-.testimonial__img {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.testimonial__bublle {
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
-}
-
-.testimonial__bublle__name {
-    color: var(--color-accent);
-    font-weight: bold;
-    filter: brightness(70%);
-}
 
 /* Arrow up */
 
@@ -497,7 +461,7 @@ project__title다음에 가상의 요소가 생기게 하는 명령 */
 
 /* Footer */
 #contact{
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-variant);
     color: var(--color-text);
 }
 
